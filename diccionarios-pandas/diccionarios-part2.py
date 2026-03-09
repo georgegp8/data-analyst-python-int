@@ -63,10 +63,13 @@ print(europe)
 # ¿Recuerdas las listas? Pueden contener cualquier cosa, incluso otras listas. Pues con los
 # diccionarios ocurre lo mismo. Los diccionarios pueden contener pares clave:valor en los que
 # los valores son de nuevo diccionarios.
-# Las claves siguen siendo los nombres de los países, pero los valores son diccionarios que
-# contienen más información que la capital.
-# Es perfectamente posible encadenar corchetes para seleccionar elementos.
-# Para obtener la población de España en europe, por ejemplo, necesitas: europe['spain']['population']
+# Como ejemplo, echa un vistazo al script donde se codifica otra versión de europe, el
+# diccionario con el que has estado trabajando todo el tiempo. Las claves siguen siendo los
+# nombres de los países, pero los valores son diccionarios que contienen más información que
+# la capital.
+# Es perfectamente posible encadenar corchetes para seleccionar elementos. Para obtener la
+# población de España en europe, por ejemplo, necesitas:
+# europe['spain']['population']
 
 # Instrucciones:
 # - Utiliza corchetes encadenados para seleccionar e imprimir la capital de Francia.
