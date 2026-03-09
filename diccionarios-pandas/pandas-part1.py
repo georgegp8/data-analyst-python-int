@@ -67,3 +67,25 @@ cars.index = row_labels
 
 # Print cars again
 print(cars)
+
+# ------------------------------------------------
+# Sección 3: De CSV a DataFrame
+# ------------------------------------------------
+# Poner los datos en un diccionario y luego construir un DataFrame funciona, pero no es muy
+# eficiente. En esos casos, los datos suelen estar disponibles como archivos con una estructura
+# regular, como el archivo CSV (valores separados por comas).
+# Para importar datos CSV a Python como un DataFrame de Pandas, puedes utilizar read_csv().
+
+# Instrucciones:
+# - Para importar archivos CSV, aún necesitas el paquete pandas: impórtalo como pd.
+# - Utiliza pd.read_csv() para importar los datos de cars.csv como un DataFrame. Guarda este DataFrame como cars.
+# - Imprime cars. ¿Todo parece estar bien?
+
+# Import pandas as pd
+import pandas as pd
+
+# Import the cars.csv data: cars
+cars = pd.read_csv("cars.csv")
+
+# Print out cars
+print(cars)
