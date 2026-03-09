@@ -38,3 +38,32 @@ cars = pd.DataFrame(my_dict)
 
 # Print cars
 print(cars)
+
+# ------------------------------------------------
+# Sección 2: De diccionario a DataFrame (2)
+# ------------------------------------------------
+# El código Python que resuelve el ejercicio anterior está incluido en el script.
+# Las etiquetas de las filas se han establecido automáticamente en números enteros de 0 a 6.
+# Para solucionarlo se ha creado una lista row_labels. Puedes utilizarla para especificar
+# las etiquetas de las filas del DataFrame cars estableciendo el atributo index de cars.
+
+# Instrucciones:
+# - Especifica las etiquetas de las filas estableciendo cars.index igual a row_labels.
+# - Vuelve a imprimir cars y comprueba si esta vez las etiquetas de las filas son correctas.
+
+# Build cars DataFrame
+names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'Egypt']
+dr = [True, False, False, False, True, True, True]
+cpc = [809, 731, 588, 18, 200, 70, 45]
+cars_dict = {'country': names, 'drives_right': dr, 'cars_per_cap': cpc}
+cars = pd.DataFrame(cars_dict)
+print(cars)
+
+# Definition of row_labels
+row_labels = ['US', 'AUS', 'JPN', 'IN', 'RU', 'MOR', 'EG']
+
+# Specify row labels of cars
+cars.index = row_labels
+
+# Print cars again
+print(cars)
