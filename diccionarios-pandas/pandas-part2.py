@@ -94,3 +94,65 @@ print(cars.loc['JPN'])
 
 # Print out observations for Australia and Egypt
 print(cars.iloc[[1, 6]])
+
+# ------------------------------------------------
+# Sección 4: loc e iloc (2)
+# ------------------------------------------------
+# loc e iloc también te permiten seleccionar tanto filas como columnas de un DataFrame. Para
+# experimentar, prueba los siguientes comandos. De nuevo, los comandos emparejados producen el
+# mismo resultado.
+#
+# cars.loc['IN', 'cars_per_cap']
+# cars.iloc[3, 0]
+#
+# cars.loc[['IN', 'RU'], 'cars_per_cap']
+# cars.iloc[[3, 4], 0]
+#
+# cars.loc[['IN', 'RU'], ['cars_per_cap', 'country']]
+# cars.iloc[[3, 4], [0, 1]]
+
+# Instrucciones:
+# - Imprime el valor drives_right de la fila correspondiente a Marruecos (su etiqueta de fila
+#   es MOR).
+# - Imprime un subDataFrame que contenga las observaciones de Rusia y Marruecos y las columnas
+#   country y drives_right.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col=0)
+
+# Print out drives_right value of Morocco
+print(cars.loc['MOR', 'drives_right'])
+
+# Print sub-DataFrame
+print(cars.iloc[[4, 5], [1, 2]])
+
+# ------------------------------------------------
+# Sección 5: loc e iloc (3)
+# ------------------------------------------------
+# También es posible seleccionar solo las columnas con loc y iloc. En ambos casos, basta con
+# poner delante de la coma un segmento que abarque del principio al final:
+#
+# cars.loc[:, 'country']
+# cars.iloc[:, 1]
+#
+# cars.loc[:, ['country','drives_right']]
+# cars.iloc[:, [1, 2]]
+
+# Instrucciones:
+# - Imprime la columna drives_right como una serie utilizando loc o iloc.
+# - Imprime la columna drives_right como un DataFrame utilizando loc o iloc.
+# - Imprime las columnas cars_per_cap y drives_right como un DataFrame utilizando loc o iloc.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col=0)
+
+# Print out drives_right column as Series
+print(cars.loc[:, 'drives_right'])
+
+# Print out drives_right column as DataFrame
+print(cars.iloc[:, [2]])
+
+# Print out cars_per_cap and drives_right as DataFrame
+print(cars.loc[:, ['cars_per_cap', 'drives_right']])
