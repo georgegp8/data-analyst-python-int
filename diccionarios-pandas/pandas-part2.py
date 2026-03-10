@@ -28,3 +28,30 @@ print(cars['drives_right'])
 
 # Print out drives_right column as Pandas DataFrame
 print(cars[['drives_right']])
+
+# ------------------------------------------------
+# Sección 2: Corchetes (2)
+# ------------------------------------------------
+# Los corchetes pueden hacer algo más que seleccionar columnas. También puedes utilizarlos para
+# obtener filas, u observaciones, de un DataFrame. La siguiente llamada selecciona las cinco
+# primeras filas del DataFrame cars:
+# cars[0:5]
+# El resultado es otro DataFrame que solo contiene las filas que has especificado.
+# Presta atención: solo puedes seleccionar filas mediante corchetes si especificas un segmento,
+# como 0:4. Además, aquí estás utilizando los índices enteros de las filas, ¡no las etiquetas
+# de las filas!
+
+# Instrucciones:
+# - Selecciona las 3 primeras observaciones de cars e imprimelas.
+# - Selecciona la cuarta, quinta y sexta observación, correspondientes a los índices de fila 3,
+#   4 y 5, e imprimelas.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col=0)
+
+# Print out first 3 observations
+print(cars[0:3])
+
+# Print out fourth, fifth and sixth observation
+print(cars[3:6])
