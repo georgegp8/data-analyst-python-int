@@ -206,3 +206,51 @@ plt.xticks([1000, 10000, 100000], ['1k', '10k', '100k'])
 
 # Mostrar el gráfico
 plt.show()
+
+# ------------------------------------------------
+# Sección 5: Otras personalizaciones
+# ------------------------------------------------
+# Si echas otro vistazo al script, verás que hay dos funciones plt.text().
+# Añade las palabras "India" y "China" en el gráfico.
+
+# Instrucciones:
+# - Añade plt.grid(True) después de las llamadas a plt.text() para que se
+#   dibujen líneas de cuadrícula en el gráfico.
+
+# Gráfico de dispersión
+plt.scatter(x=gdp_cap, y=life_exp, s=np.array(pop) * 2, c=col, alpha=0.8)
+
+# Personalizaciones previas
+plt.xscale('log')
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.xticks([1000, 10000, 100000], ['1k', '10k', '100k'])
+
+# Personalizaciones adicionales
+plt.text(1550, 71, 'India')
+plt.text(5700, 80, 'China')
+
+# Añadir llamada a grid()
+plt.grid(True)
+
+# Mostrar el gráfico
+plt.show()
+
+# ------------------------------------------------
+# Sección 6: Interpretación
+# ------------------------------------------------
+# Si observas tu colorido gráfico, queda claro que las personas viven más tiempo en los
+# países con un PIB per cápita más alto. Ningún país de renta alta tiene una esperanza de
+# vida realmente corta, y ningún país de renta baja tiene una esperanza de vida muy larga.
+# Aun así, hay una enorme diferencia de esperanza de vida entre países del mismo nivel de
+# renta. La mayoría de la gente vive en países de renta media, donde la diferencia en la
+# esperanza de vida es enorme entre países, según cómo se distribuya la renta y cómo se utilice.
+# ¿Qué puedes decir del gráfico? [ver imagen interpretación.png]
+
+# Respuestas posibles:
+# - Los países en azul, correspondientes a África, tienen una esperanza de vida
+#   baja y un PIB per cápita bajo.  <-- CORRECTA
+# - Existe una correlación negativa entre el PIB per cápita y la esperanza de vida.
+# - China tiene un PIB per cápita más bajo y una esperanza de vida menor
+#   en comparación con la India.
