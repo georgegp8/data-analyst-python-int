@@ -96,3 +96,38 @@ plt.title('World Development in 2007')
 
 # Mostrar el gráfico
 plt.show()
+
+# ------------------------------------------------
+# Sección 2: Marcas
+# ------------------------------------------------
+# Las personalizaciones que has programado hasta ahora están disponibles en el script,
+# de forma más concisa.
+# Puedes controlar las marcas de Y si especificas dos argumentos:
+#   plt.yticks([0,1,2], ["one","two","three"])
+# En este ejemplo, las marcas de 0, 1 y 2 se sustituirán por one, two y three respectivamente.
+# Hagamos algo parecido con el eje X usando xticks(). Los valores 1000, 10000 y 100000
+# deben sustituirse por 1k, 10k y 100k.
+# Para ello ya se han creado dos listas: tick_val y tick_lab.
+
+# Instrucciones:
+# - Utiliza tick_val y tick_lab como entradas de xticks() para que el gráfico sea más legible.
+# - Visualiza el gráfico con plt.show() después de haber añadido las personalizaciones.
+
+# Gráfico de dispersión
+plt.scatter(gdp_cap, life_exp)
+
+# Personalizaciones previas
+plt.xscale('log')
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+
+# Definición de tick_val y tick_lab
+tick_val = [1000, 10000, 100000]
+tick_lab = ['1k', '10k', '100k']
+
+# Adaptar las marcas del eje X
+plt.xticks(tick_val, tick_lab)
+
+# Mostrar el gráfico
+plt.show()
