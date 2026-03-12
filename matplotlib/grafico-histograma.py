@@ -110,3 +110,27 @@ plt.hist(life_exp1950, bins=15)
 # Mostrar y limpiar el gráfico de nuevo
 plt.show()
 plt.clf()
+
+# ------------------------------------------------
+# Sección 4: Elige el gráfico adecuado (1)
+# ------------------------------------------------
+# Eres profesor, enseñas Ciencia de Datos con Python y quieres evaluar
+# visualmente si las calificaciones de tu examen siguen una distribución
+# determinada. ¿Qué gráfico utilizas?
+
+# Respuestas posibles:
+# - Gráfico lineal
+# - Diagrama de dispersión
+# - Histograma  <-- CORRECTA
+
+# ------------------------------------------------
+# Sección 5: Elige el gráfico adecuado (2)
+# ------------------------------------------------
+# Eres profesor de Análisis de Datos con Python y quieres evaluar visualmente
+# si las respuestas más largas a las preguntas de un examen llevan a notas
+# más altas. ¿Qué gráfico utilizas?
+
+# Respuestas posibles:
+# - Gráfico lineal
+# - Diagrama de dispersión  <-- CORRECTA
+# - Histograma
