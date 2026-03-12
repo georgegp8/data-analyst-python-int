@@ -38,3 +38,32 @@ plt.hist(life_exp)
 
 # Mostrar el histograma
 plt.show()
+
+# ------------------------------------------------
+# Sección 2: Construye un histograma (2): barras
+# ------------------------------------------------
+# En el ejercicio anterior, no especificaste el número de barras. De forma predeterminada,
+# Python establece el número de barras en 10 en ese caso. El número de barras es bastante
+# importante. Si hay demasiadas pocas barras, simplificarán demasiado la realidad y no te
+# mostrarán los detalles. Demasiadas barras complicarán demasiado la realidad y no mostrarán
+# el panorama general.
+# Para controlar el número de barras en las que dividir los datos, puedes establecer el argumento bins.
+# plt.show() muestra un gráfico y plt.clf() lo vuelve a limpiar para que puedas empezar de nuevo.
+
+# Instrucciones:
+# - Construye un histograma de life_exp con 5 barras. ¿Puedes decir qué papelera contiene más observaciones?
+# - Construye otro histograma de life_exp, esta vez con 20 barras. ¿Mejor?
+
+# Construir histograma con 5 barras
+plt.hist(life_exp, bins=5)
+
+# Mostrar y limpiar el gráfico
+plt.show()
+plt.clf()
+
+# Construir histograma con 20 barras
+plt.hist(life_exp, bins=20)
+
+# Mostrar y limpiar de nuevo
+plt.show()
+plt.clf()
