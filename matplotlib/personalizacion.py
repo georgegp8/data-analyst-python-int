@@ -131,3 +131,78 @@ plt.xticks(tick_val, tick_lab)
 
 # Mostrar el gráfico
 plt.show()
+
+# ------------------------------------------------
+# Sección 3: Tamaños
+# ------------------------------------------------
+# Ahora mismo, el gráfico de dispersión solo es una nube de puntos azules que no se
+# distinguen entre sí. ¿No estaría bien que el tamaño de los puntos se correspondiera
+# con la población?
+# La lista pop contiene las cifras de población de cada país en millones y se añade
+# al método de dispersión como argumento s para indicar el tamaño.
+
+# Instrucciones:
+# - Importa el paquete numpy como np.
+# - Utiliza np.array() para crear una matriz numpy a partir de pop. Llámala np_pop.
+# - Duplica los valores de np_pop estableciendo np_pop igual a np_pop * 2.
+# - Cambia el argumento s dentro de plt.scatter() para que sea np_pop en lugar de pop.
+
+# Almacenar pop como array de numpy: np_pop
+np_pop = np.array(pop)
+
+# Duplicar np_pop
+np_pop = np_pop * 2
+
+# Actualizar: establecer s como np_pop
+plt.scatter(gdp_cap, life_exp, s=np_pop)
+
+# Personalizaciones previas
+plt.xscale('log')
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.xticks([1000, 10000, 100000], ['1k', '10k', '100k'])
+
+# Mostrar el gráfico
+plt.show()
+
+# ------------------------------------------------
+# Sección 4: Colores
+# ------------------------------------------------
+# El siguiente paso es dar color al gráfico. Se ha creado una lista col con un color
+# para cada país según el continente al que pertenezca:
+# Asia: 'red' | Europe: 'green' | Africa: 'blue' | Americas: 'yellow' | Oceania: 'black'
+
+# Instrucciones:
+# - Añade c = col a los argumentos de la función plt.scatter().
+# - Cambia la opacidad de las burbujas: ajusta el argumento alpha a 0.8 dentro de
+#   plt.scatter(). El alfa va de 0 (totalmente transparente) a 1 (nada transparente).
+
+col = ['red', 'green', 'blue', 'blue', 'yellow', 'black', 'green', 'red', 'red', 'green',
+       'blue', 'yellow', 'green', 'blue', 'yellow', 'green', 'blue', 'blue', 'red', 'blue',
+       'yellow', 'blue', 'blue', 'yellow', 'red', 'yellow', 'blue', 'blue', 'blue', 'yellow',
+       'blue', 'green', 'yellow', 'green', 'green', 'blue', 'yellow', 'yellow', 'blue', 'yellow',
+       'blue', 'blue', 'blue', 'green', 'green', 'blue', 'blue', 'green', 'blue', 'green',
+       'yellow', 'blue', 'blue', 'yellow', 'yellow', 'red', 'green', 'green', 'red', 'red',
+       'red', 'red', 'green', 'red', 'green', 'yellow', 'red', 'red', 'blue', 'red',
+       'red', 'red', 'red', 'blue', 'blue', 'blue', 'blue', 'blue', 'red', 'blue',
+       'blue', 'blue', 'yellow', 'red', 'green', 'blue', 'blue', 'red', 'blue', 'red',
+       'green', 'black', 'yellow', 'blue', 'blue', 'green', 'red', 'red', 'yellow', 'black',
+       'yellow', 'yellow', 'red', 'green', 'green', 'yellow', 'blue', 'green', 'blue', 'blue',
+       'red', 'blue', 'green', 'blue', 'red', 'green', 'green', 'blue', 'blue', 'green',
+       'blue', 'blue', 'green', 'green', 'red', 'red', 'blue', 'red', 'blue', 'yellow',
+       'blue', 'green', 'blue', 'green', 'yellow', 'yellow', 'yellow', 'red', 'red', 'red',
+       'blue', 'blue']
+
+# Especificar c y alpha dentro de plt.scatter()
+plt.scatter(x=gdp_cap, y=life_exp, s=np.array(pop) * 2, c=col, alpha=0.8)
+
+# Personalizaciones previas
+plt.xscale('log')
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.xticks([1000, 10000, 100000], ['1k', '10k', '100k'])
+
+# Mostrar el gráfico
+plt.show()
