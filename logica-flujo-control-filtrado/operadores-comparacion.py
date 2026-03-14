@@ -6,16 +6,24 @@
 # ------------------------------------------------
 # Sección 1: Igualdad
 # ------------------------------------------------
-# Para comprobar si dos valores Python son iguales usas el operador de comparación ==.
+# Para comprobar si dos valores de Python, o variables, son iguales puedes utilizar ==.
 # Para comprobar la desigualdad, necesitas !=.
-# El operador < y > funcionan como de espera en Python: comprueban si el valor de la
-# izquierda es menor o mayor que el de la derecha respectivamente.
-# Por último, <= y >= comprueban si el miembro de la izquierda es menor o igual que
-# o mayor o igual que el miembro de la derecha.
+# Para refrescar la memoria, echa un vistazo a los siguientes ejemplos que dan
+# como resultado True. No dudes en probarlos.
+#
+#   2 == (1 + 1)
+#   "intermediate" != "python"
+#   True != False
+#   "Python" != "python"
+#
+# Cuando escribas estas comparaciones en un guión, tendrás que envolverlas con
+# una función print() para ver el resultado.
 
 # Instrucciones:
-# - En el código de la muestra, expresiones como True == False ya están codificadas.
-#   Pruébalo y observa cuáles son los resultados.
+# - Escribe código para ver si True es igual a False.
+# - Escribe código Python para comprobar si -5 * 15 no es igual a 75.
+# - Pregunta a Python si las cadenas "pyscript" y "PyScript" son iguales.
+# - ¿Qué ocurre si comparas booleanos y enteros? Escribe código para ver si True y 1 son iguales.
 
 # Comparison of booleans
 print(True == False)
@@ -24,7 +32,7 @@ print(True == False)
 print(-5 * 15 != 75)
 
 # Comparison of strings
-print("pyscript" == "pyscript")
+print('pyscript' == 'PyScript')
 
 # Compare a boolean with an integer
 print(True == 1)
