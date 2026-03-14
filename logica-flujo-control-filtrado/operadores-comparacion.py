@@ -37,3 +37,35 @@ print('pyscript' == 'PyScript')
 # Compare a boolean with an integer
 print(True == 1)
 
+# ------------------------------------------------
+# Sección 2: Mayor y menor que
+# ------------------------------------------------
+# En el vídeo, Hugo también habló de los signos menor que y mayor que, < y > en Python.
+# Puedes combinarlos con un signo igual: <= y >=.
+# Presta atención: <= es una sintaxis válida, pero =< no lo es.
+#
+# Todas las expresiones Python del siguiente fragmento de código se evalúan como True:
+#
+#   3 < 4
+#   3 <= 4
+#   "alpha" <= "beta"
+#
+# Recuerda que, para comparar cadenas, Python determina la relación según el orden alfabético.
+
+# Instrucciones:
+# - Escribe expresiones Python, envueltas en una función print(), para comprobar si:
+#   - x es mayor o igual que -10. Ya se ha definido x.
+#   - "test" es menor o igual que y. Ya se ha definido y.
+#   - True es mayor que False.
+
+# Comparison of integers
+x = -3 * 6
+print(x >= -10)
+
+# Comparison of strings
+y = "test"
+print('test' <= y)
+
+# Comparison of booleans
+print(True > False)
+
