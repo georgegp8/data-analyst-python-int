@@ -69,3 +69,33 @@ print('test' <= y)
 # Comparison of booleans
 print(True > False)
 
+# ------------------------------------------------
+# Sección 3: Comparar matrices
+# ------------------------------------------------
+# También puedes utilizar operadores de comparación con matrices NumPy.
+#
+# ¿Recuerdas areas, la lista de medidas de superficie de las distintas habitaciones
+# de la casa de Introducción a Python? Esta vez hay dos matrices NumPy: my_house y
+# your_house. Ambas contienen las zonas de la cocina, el salón, el dormitorio y el
+# cuarto de baño en el mismo orden, para que puedas compararlos.
+
+# Instrucciones:
+# - Utilizando operadores de comparación, genera matrices booleanas que respondan
+#   a las siguientes preguntas:
+#   - ¿Qué zonas de my_house son mayores o iguales que 18?
+#   - También puedes comparar dos matrices NumPy elemento a elemento.
+#     ¿Qué zonas de my_house son más pequeñas que las de your_house?
+#   - ¡Asegúrate de envolver ambos comandos en una declaración print() para que
+#     puedas inspeccionar la salida!
+
+# Create arrays
+import numpy as np
+my_house = np.array([18.0, 20.0, 10.75, 9.50])
+your_house = np.array([14.0, 24.0, 14.25, 9.0])
+
+# my_house greater than or equal to 18
+print(my_house >= 18)
+
+# my_house less than your_house
+print(my_house < your_house)
+
