@@ -39,3 +39,27 @@ else:
 # d) La sintaxis es incorrecta; este código producirá un error
 #
 # Respuesta correcta: b) medium
+
+# ------------------------------------------------
+# Sección 2: if
+# ------------------------------------------------
+# Es hora de echar un vistazo a tu casa.
+#
+# En el código de ejemplo se definen dos variables: room, una cadena que te indica qué habitación de la casa
+# estamos viendo, y area, la superficie de esa habitación.
+
+# Instrucciones:
+# - Echa un vistazo a la declaración if que imprime "Looking around in the kitchen." si room es igual a "kit".
+# - Escribe otra declaración if que imprima "big place!" si area es mayor que 15.
+
+# Define variables
+room = "kit"
+area = 14.0
+
+# if statement for room
+if room == "kit":
+    print("Looking around in the kitchen.")
+
+# if statement for area
+if area > 15:
+    print("big place!")
