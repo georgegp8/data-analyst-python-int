@@ -63,3 +63,64 @@ if room == "kit":
 # if statement for area
 if area > 15:
     print("big place!")
+
+# ------------------------------------------------
+# Sección 3: else
+# ------------------------------------------------
+# En el script, la construcción if de room se ha ampliado con una declaración else,
+# para que se imprima "looking around elsewhere." si la condición room == "kit" se evalúa como False.
+#
+# ¿Puedes hacer algo similar para añadir más funcionalidad a la construcción if de area?
+
+# Instrucciones:
+# Añade una declaración else a la segunda estructura de control para que se imprima "pretty small."
+# si area > 15 se evalúa como False.
+
+# Define variables
+room = "kit"
+area = 14.0
+
+# if-else construct for room
+if room == "kit":
+    print("Looking around in the kitchen.")
+else:
+    print("Looking around elsewhere.")
+
+# if-else construct for area
+if area > 15:
+    print("big place!")
+else:
+    print("pretty small.")
+
+# ------------------------------------------------
+# Sección 4: Personalízalo aún más: elif
+# ------------------------------------------------
+# También es posible echar un vistazo en el dormitorio. El código de ejemplo contiene una parte elif que
+# comprueba si room es igual a "bed". En ese caso, se imprime "looking around in the bedroom.".
+#
+# ¡Te toca! Haz una adición similar a la segunda estructura de control para personalizar aún más los mensajes
+# para distintos valores de area.
+
+# Instrucciones:
+# Añade un elif a la segunda estructura de control de forma que se imprima "medium size, nice!"
+# si area es mayor que 10.
+
+# Define variables
+room = "bed"
+area = 14.0
+
+# if-elif-else construct for room
+if room == "kit":
+    print("Looking around in the kitchen.")
+elif room == "bed":
+    print("Looking around in the bedroom.")
+else:
+    print("Looking around elsewhere.")
+
+# if-elif-else construct for area
+if area > 15:
+    print("big place!")
+elif area > 10:
+    print("medium size, nice!")
+else:
+    print("pretty small.")
