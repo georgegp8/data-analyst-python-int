@@ -89,3 +89,38 @@ car_maniac = cars[many_cars]
 # Print car_maniac
 print(car_maniac)
 
+# ------------------------------------------------
+# Sección 4: Coches per cápita (2)
+# ------------------------------------------------
+# ¿Recuerdas np.logical_and(), np.logical_or() y np.logical_not(), las variantes NumPy de los
+# operadores and, or y not? También puedes utilizarlos en la serie de pandas para realizar operaciones de
+# filtrado más avanzadas.
+#
+# Toma este ejemplo que selecciona las observaciones que tienen un cars_per_cap entre 10 y 80. Prueba
+# estas líneas de código paso a paso para ver qué ocurre.
+#
+#   cpc = cars['cars_per_cap']
+#   between = np.logical_and(cpc > 10, cpc < 80)
+#   medium = cars[between]
+
+# Instrucciones:
+# Utiliza el ejemplo de código proporcionado para crear un DataFrame medium, que incluya todas las
+# observaciones de cars que tengan un cars_per_cap entre 100 y 500.
+# Imprime medium.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Import numpy, you'll need this
+import numpy as np
+
+# Create medium: observations with cars_per_cap between 100 and 500
+cpc = cars['cars_per_cap']
+between = np.logical_and(cpc > 100, cpc < 500)
+medium = cars[between]
+
+# Print medium
+print(medium)
+
+
