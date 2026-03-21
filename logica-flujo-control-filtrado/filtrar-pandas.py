@@ -57,3 +57,35 @@ sel = cars[cars['drives_right']]
 # Print sel
 print(sel)
 
+# ------------------------------------------------
+# Sección 3: Coches per cápita (1)
+# ------------------------------------------------
+# Ciñámonos un poco más a los datos de cars. Esta vez quieres averiguar qué países tienen una cifra
+# elevada de coches per cápita. En otras palabras, ¿en qué países tiene mucha gente un coche, o tal vez varios
+# coches?
+#
+# Al igual que en el ejemplo anterior, querrás construir una serie booleana, que luego podrás utilizar para
+# subdividir el DataFrame cars para seleccionar determinadas observaciones. Si quieres hacerlo en una sola
+# línea, ¡está perfectamente bien!
+
+# Instrucciones:
+# - Selecciona la columna cars_per_cap de cars como una serie de pandas y guárdala como cpc.
+# - Utiliza cpc en combinación con un operador de comparación y 500. Quieres acabar con una serie
+#   booleana que sea True si el país correspondiente tiene un cars_per_cap superior a 500 y False en
+#   caso contrario. Guarda esta serie booleana como many_cars.
+# - Utiliza many_cars para subconjuntar cars, de forma similar a lo que hiciste antes. Guarda el resultado
+#   como car_maniac.
+# - Imprime car_maniac para ver si lo has hecho bien.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Create car_maniac: observations that have a cars_per_cap over 500
+cpc = cars['cars_per_cap']
+many_cars = cpc > 500
+car_maniac = cars[many_cars]
+
+# Print car_maniac
+print(car_maniac)
+
