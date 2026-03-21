@@ -36,3 +36,24 @@ sel = cars[dr]
 
 # Print sel
 print(sel)
+
+# ------------------------------------------------
+# Sección 2: Conducir por la derecha (2)
+# ------------------------------------------------
+# El código del ejemplo anterior funcionaba bien, pero en realidad ha creado innecesariamente una nueva
+# variable dr. Puedes conseguir el mismo resultado sin esta variable intermedia. Pon en el código que calcula
+# dr directamente en los corchetes que seleccionan las observaciones de cars.
+
+# Instrucciones:
+# Convierte el código en una sola línea que calcule la variable sel como antes.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Convert code to a one-liner
+sel = cars[cars['drives_right']]
+
+# Print sel
+print(sel)
+
