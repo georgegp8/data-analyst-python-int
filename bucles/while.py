@@ -73,3 +73,45 @@ while offset != 0 :
     offset = offset - 1
     print(offset)
 
+# ------------------------------------------------
+# Sección 3: Añade condicionales
+# ------------------------------------------------
+# El bucle while que corrige el offset es un buen comienzo, pero ¿qué pasa si offset es negativo?
+# Puedes intentar ejecutar el siguiente código en el que offset se inicializa en -6:
+#
+#   offset = -6
+#   while offset != 0 :
+#       print("correcting...")
+#       offset = offset - 1
+#       print(offset)
+#
+# Pero tu sesión se desconectará. El bucle while nunca dejará de ejecutarse, porque offset seguirá
+# disminuyendo en cada ejecución. offset != 0 nunca se convertirá en False y el bucle while continuará
+# para siempre.
+#
+# Arregla las cosas con una declaración if - else dentro del bucle while.
+#
+# Ten en cuenta que si el bucle while tarda demasiado en ejecutarse, o tu sesión caduca, puede que
+# hayas creado un bucle infinito. En particular, recuerda añadir sangría al contenido del bucle utilizando
+# cuatro espacios o la sangría automática, y asegúrate de que las condiciones son las necesarias para que
+# el bucle tenga un punto de parada.
+
+# Instrucciones:
+# - Inicializa offset en -6.
+# - Dentro del bucle while, completa la declaración if - else:
+#   - Si offset es mayor que cero, debes disminuir offset en 1.
+#   - Si no, debes aumentar offset en 1.
+
+# Initialize offset
+offset = -6
+
+# Code the while loop
+while offset != 0 :
+    print("correcting...")
+    if offset > 0 :
+        offset = offset - 1
+    else :
+        offset = offset + 1
+    print(offset)
+
+
