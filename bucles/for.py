@@ -55,3 +55,46 @@ areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 for index, area in enumerate(areas) :
     print("room " + str(index) + ": " + str(area))
 
+# ------------------------------------------------
+# Sección 3: Índices y valores (2)
+# ------------------------------------------------
+# Para la gente que no es programadora, room 0: 11.25 es extraño. ¿No sería mejor que la cuenta empezara
+# en 1?
+
+# Instrucciones:
+# Adapta la función print() en el bucle for para que la primera impresión sea "room 1: 11.25", la segunda
+# "room 2: 18.0" y así sucesivamente.
+
+# areas list
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Code the for loop
+for index, area in enumerate(areas) :
+    print("room " + str(index + 1) + ": " + str(area))
+
+# ------------------------------------------------
+# Sección 4: Bucle por una lista de listas
+# ------------------------------------------------
+# ¿Recuerdas la variable house del curso Introducción a Python? Echa un vistazo a su definición en el script.
+# Básicamente es una lista de listas, donde cada sublista contiene el nombre y la zona de una habitación de la
+# casa.
+#
+# ¡Esta vez te toca a ti construir un bucle for desde cero!
+
+# Instrucciones:
+# Escribe un bucle for que recorra cada sublista de house e imprima the x is y sqm, donde X es el
+# nombre de la habitación e Y es el área de la habitación.
+
+# house list of lists
+house = [["hallway", 11.25],
+         ["kitchen", 18.0],
+         ["living room", 20.0],
+         ["bedroom", 10.75],
+         ["bathroom", 9.50]]
+
+# Build a for loop from scratch
+for room in house :
+    print("the " + str(room[0]) + " is " + str(room[1]) + " sqm")
+
+
+
