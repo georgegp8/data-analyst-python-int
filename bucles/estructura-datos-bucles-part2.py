@@ -70,3 +70,33 @@ cars = pd.read_csv('cars.csv', index_col = 0)
 for lab, row in cars.iterrows() :
     print(lab + ": " + str(row['cars_per_cap']))
 
+# ------------------------------------------------
+# Sección 3: Añadir una columna (1)
+# ------------------------------------------------
+# En el vídeo, Hugo te mostró cómo añadir la longitud de los nombres de los países del DataFrame brics en
+# una nueva columna:
+#
+#   for lab, row in brics.iterrows() :
+#       brics.loc[lab, "name_length"] = len(row["country"])
+#
+# Puedes hacer cosas parecidas en el DataFrame cars.
+
+# Instrucciones:
+# - Utiliza un bucle for para añadir una nueva columna, llamada COUNTRY, que contenga una versión en
+#   mayúsculas de los nombres de los países de la columna "country". Para ello puedes utilizar el método
+#   de cadena upper().
+# - Para ver si el código ha funcionado, imprime cars. No añadas sangría a este código, para que no forme
+#   parte del bucle for.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Code for loop that adds COUNTRY column
+for lab, row in cars.iterrows() :
+    cars.loc[lab, "COUNTRY"] = row["country"].upper()
+
+# Print cars
+print(cars)
+
+
