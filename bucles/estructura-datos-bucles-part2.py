@@ -42,3 +42,31 @@ cars = pd.read_csv('cars.csv', index_col = 0)
 for lab, row in cars.iterrows() :
     print(lab)
     print(row)
+
+# ------------------------------------------------
+# Sección 2: Bucle por un DataFrame (2)
+# ------------------------------------------------
+# Los datos de fila que genera iterrows() en cada ejecución son series de pandas. Este formato no es muy
+# cómodo de imprimir. Por suerte, puedes seleccionar fácilmente variables de la serie de pandas mediante
+# corchetes:
+#
+#   for lab, row in brics.iterrows() :
+#       print(row['country'])
+
+# Instrucciones:
+# - Mediante los iteradores lab y row, adapta el código del bucle for de forma que la primera iteración
+#   imprima "US: 809", la segunda iteración "AUS: 731", y así sucesivamente.
+# - El resultado debe tener la forma "country: cars_per_cap". Asegúrate de imprimir esta cadena exacta
+#   (con el espaciado correcto).
+#
+# Puedes utilizar str() para convertir los datos enteros en una cadena, de modo que puedas imprimirlos
+# junto con la etiqueta del país.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Adapt for loop
+for lab, row in cars.iterrows() :
+    print(lab + ": " + str(row['cars_per_cap']))
+
