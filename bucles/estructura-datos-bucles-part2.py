@@ -99,4 +99,42 @@ for lab, row in cars.iterrows() :
 # Print cars
 print(cars)
 
+# ------------------------------------------------
+# Sección 4: Añadir una columna (2)
+# ------------------------------------------------
+# Utilizar iterrows() para iterar por cada observación de un DataFrame Pandas es fácil de entender, pero
+# no muy eficiente. En cada iteración, creas una nueva serie de pandas.
+#
+# Si quieres añadir una columna a un DataFrame mediante una llamada a una función de otra columna, el
+# método iterrows() en combinación con un bucle for no es la mejor opción. En su lugar,
+# deberás utilizar apply().
+#
+# Compara la versión iterrows() con la versión apply() para obtener el mismo resultado en el
+# DataFrame brics:
+#
+#   for lab, row in brics.iterrows() :
+#       brics.loc[lab, "name_length"] = len(row["country"])
+#
+#   brics["name_length"] = brics["country"].apply(len)
+#
+# Podemos hacer algo similar para llamar al método upper() en cada nombre de la columna country. Sin
+# embargo, upper() es un método, por lo que necesitaremos un enfoque ligeramente distinto:
+
+# Instrucciones:
+# - Sustituye el bucle for por una sola línea que utilice .apply(str.upper). La llamada debe dar el mismo
+#   resultado: debe añadirse una columna COUNTRY a cars que contenga una versión en mayúsculas de los
+#   nombres de los países.
+# - Como siempre, imprime cars para ver los frutos de tu duro trabajo.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Use .apply(str.upper)
+cars["COUNTRY"] = cars["country"].apply(str.upper)
+
+# Print cars
+print(cars)
+
+
 
