@@ -60,3 +60,44 @@ print(np.random.randint(1,7))
 
 # Use randint() again
 print(np.random.randint(1,7))
+
+# ------------------------------------------------
+# Sección 3: Determina el próximo movimiento
+# ------------------------------------------------
+# En la apuesta del Empire State Building, tu próximo movimiento depende del número que obtengas tras
+# lanzar los dados. Podemos codificarlo perfectamente con una construcción if - elif - else.
+#
+# El código de ejemplo supone que actualmente estás en el paso 50. ¿Puedes completar las piezas que faltan
+# para terminar el script? numpy ya se ha importado como np y el valor de inicialización se ha establecido en
+# 123, así que ya no tienes que preocuparte por eso.
+
+# Instrucciones:
+# - Tira los dados. Utiliza randint() para crear la variable dice.
+# - Termina la construcción if - elif - else sustituyendo ___:
+#   - Si dice es 1 o 2, bajas un escalón.
+#   - si dice es 3, 4 o 5, subes un escalón.
+#   - Si no, vuelve a tirar los dados. El número del dado es el número de escalones que subes.
+# - Imprime dice y step. Dado el valor de dice, ¿step se ha actualizado correctamente?
+
+# NumPy is imported, seed is set
+import numpy as np
+np.random.seed(123)
+
+# Starting step
+step = 50
+
+# Roll the dice
+dice = np.random.randint(1,7)
+
+# Finish the control construct
+if dice <= 2 :
+    step = step - 1
+elif dice <= 5 :
+    step = step + 1
+else :
+    step = step + np.random.randint(1,7)
+
+# Print out dice and step
+print(dice)
+print(step)
+
