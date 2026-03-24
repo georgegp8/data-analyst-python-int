@@ -30,3 +30,33 @@ np.random.seed(123)
 
 # Generate and print random float
 print(np.random.rand())
+
+# ------------------------------------------------
+# Sección 2: Tira los dados
+# ------------------------------------------------
+# En el ejercicio anterior, utilizaste rand(), que genera un float aleatorio entre 0 y 1.
+#
+# Como explica Hugo en el vídeo, también puedes utilizar randint(), también una función del paquete
+# random, para generar números enteros aleatoriamente. La siguiente llamada genera aleatoriamente el
+# número entero 4, 5, 6 o 7. 8 no está incluido.
+#
+#   import numpy as np
+#   np.random.randint(4, 8)
+#
+# NumPy ya se ha importado como np y se ha establecido un valor de inicialización.
+# ¿Puedes tirar los dados?
+
+# Instrucciones:
+# - Utiliza randint() con los argumentos adecuados para generar aleatoriamente el número entero 1, 2, 3, 4,
+#   5 o 6. Esto simula un dado. Imprímelo.
+# - Repite el resultado para ver si el segundo lanzamiento es diferente. De nuevo, imprime el resultado.
+
+# Import numpy and set seed
+import numpy as np
+np.random.seed(123)
+
+# Use randint() to simulate a dice
+print(np.random.randint(1,7))
+
+# Use randint() again
+print(np.random.randint(1,7))
