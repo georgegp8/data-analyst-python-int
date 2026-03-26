@@ -237,4 +237,61 @@ import matplotlib.pyplot as plt
 plt.hist(ends)
 plt.show()
 
+# ------------------------------------------------
+# Sección 5: Calcula las probabilidades
+# ------------------------------------------------
+# El histograma del ejercicio anterior se creó a partir de una matriz NumPy ends, que contiene 500 enteros. Cada número entero
+# representa el punto final de un recorrido aleatorio. Para calcular la probabilidad de que este punto final sea mayor o igual que 60, puedes
+# contar el número de enteros en ends que son mayores o iguales que 60 y dividir ese número por 500, el número total de simulaciones.
+#
+# Entonces, ¿cuál es la probabilidad estimada de que alcances al menos 60 escalones de altura si juegas a este Empire State Building
+# Simulator? La matriz ends ya está disponible en tu sesión de Python para que puedas calcularla.
+
+# Instrucciones:
+# - Utiliza np.sum() para calcular el número de elementos en ends que son mayores o iguales que 60.
+# - Divide este número por 500, el número total de simulaciones, para calcular la probabilidad.
+# - Imprime la probabilidad resultante para ver los frutos de tu duro trabajo.
+
+# Import numpy as np
+import numpy as np
+
+# Set the seed
+np.random.seed(123)
+
+# Initialize all_walks
+all_walks = []
+
+# Simulate random walk 500 times
+for i in range(500) :
+    random_walk = [0]
+    for x in range(100) :
+        step = random_walk[-1]
+        dice = np.random.randint(1,7)
+
+        if dice <= 2:
+            step = max(0, step - 1)
+        elif dice <= 5:
+            step = step + 1
+        else:
+            step = step + np.random.randint(1,7)
+
+        # Implement clumsiness
+        if np.random.rand() <= 0.001 :
+            step = 0
+
+        random_walk.append(step)
+    all_walks.append(random_walk)
+
+# Create and plot np_aw_t
+np_aw_t = np.transpose(np.array(all_walks))
+
+# Select last row from np_aw_t: ends
+ends = np_aw_t[-1,:]
+
+# Calculate the probability
+prob = np.sum(ends >= 60) / 500
+
+# Print the probability
+print(prob)
+
 
