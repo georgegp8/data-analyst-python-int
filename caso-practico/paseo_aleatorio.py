@@ -96,3 +96,59 @@ for x in range(100) :
 
 # Print random_walk
 print(random_walk)
+
+# ------------------------------------------------
+# Sección 3: Visualiza el paseo
+# ------------------------------------------------
+# ¡Visualicemos este paseo aleatorio! ¿Recuerdas cómo podías utilizar matplotlib para construir un
+# gráfico lineal?
+#
+#   import matplotlib.pyplot as plt
+#   plt.plot(x, y)
+#   plt.show()
+#
+# La primera lista que pases se mapea en el eje x y la segunda lista se mapea en el eje y.
+#
+# Si solo pasas un argumento, Python sabrá qué hacer y utilizará el índice de la lista para mapearlo en el
+# eje x, y los valores de la lista en el eje y.
+
+# Instrucciones:
+# Añade algunas líneas de código después del bucle for:
+# - Importa matplotlib.pyplot como plt.
+# - Utiliza plt.plot() para representar random_walk.
+# - Termina con plt.show() para visualizar el gráfico.
+
+# Import numpy and set seed
+import numpy as np
+np.random.seed(123)
+
+# Initialize random_walk
+random_walk = [0]
+
+# Complete the for loop
+for x in range(100) :
+    # Set step: last element in random_walk
+    step = random_walk[-1]
+
+    # Roll the dice
+    dice = np.random.randint(1,7)
+
+    # Determine next step
+    if dice <= 2:
+        step = max(0, step - 1)
+    elif dice <= 5:
+        step = step + 1
+    else:
+        step = step + np.random.randint(1,7)
+
+    # Append next_step to random_walk
+    random_walk.append(step)
+
+# Import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+
+# Plot random_walk
+plt.plot(random_walk)
+
+# Show the plot
+plt.show()
