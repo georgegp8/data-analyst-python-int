@@ -115,3 +115,65 @@ np_aw_t = np.transpose(np_aw)
 plt.plot(np_aw_t)
 plt.show()
 
+# ------------------------------------------------
+# Sección 3: Implementa torpeza
+# ------------------------------------------------
+# Todo este análisis del paseo aleatorio se ha realizado numerosas veces. Sin embargo, no has incluido el
+# elemento de torpeza todavía. En el siguiente fragmento de código, este problema se soluciona.
+#
+# En los ejercicios anteriores, especificaste el número de cada intento con un bucle for. Lo hiciste de esta
+# manera:
+#
+#   for i in range(10) :
+#       ...
+#
+# Este bucle for no tiene más utilidad que repetir el código 10 veces. De hecho, la variable i no se utiliza
+# dentro del bucle for. Si sólo te preocupa el número de repeticiones, una forma más elegante para repetir
+# el código un número específico de veces es utilizar _ en lugar del nombre de variable de iteración.
+#
+# En la presente solución, sin embargo, i es útil, porque necesitas crear 20 listas y asignarlas a all_walks.
+
+# Instrucciones:
+# - Cambia la función range() para que la simulación se realice 20 veces.
+# - Termina la condición if para que step se ponga a 0 si un float aleatorio es menor o igual que 0.005.
+#   Utiliza np.random.rand().
+
+# Import numpy as np
+import numpy as np
+
+# Set the seed
+np.random.seed(123)
+
+# Initialize all_walks
+all_walks = []
+
+# Simulate random walk 20 times
+for i in range(20) :
+    random_walk = [0]
+    for x in range(100) :
+        step = random_walk[-1]
+        dice = np.random.randint(1,7)
+
+        if dice <= 2:
+            step = max(0, step - 1)
+        elif dice <= 5:
+            step = step + 1
+        else:
+            step = step + np.random.randint(1,7)
+
+        # Implement clumsiness
+        if np.random.rand() <= 0.005 :
+            step = 0
+
+        random_walk.append(step)
+    all_walks.append(random_walk)
+
+# Create and plot np_aw_t
+np_aw_t = np.transpose(np.array(all_walks))
+
+# Import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+plt.plot(np_aw_t)
+plt.show()
+
+
