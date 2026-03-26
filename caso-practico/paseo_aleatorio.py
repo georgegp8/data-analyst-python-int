@@ -50,3 +50,49 @@ for x in range(100) :
 
 # Print random_walk
 print(random_walk)
+
+# ------------------------------------------------
+# Sección 2: ¿Hasta dónde puedes llegar?
+# ------------------------------------------------
+# Las cosas van tomando forma. Ya tienes un código que calcula tu ubicación en el Empire State Building
+# después de 100 lanzamientos de dados. Sin embargo, hay algo en lo que no hemos pensado: no puedes bajar
+# de 0.
+#
+# Una forma típica de resolver problemas como éste es utilizar max(). Si pasas a max() dos argumentos, se
+# devuelve el mayor. Por ejemplo, para asegurarte de que una variable x nunca baje de 10 cuando la
+# disminuyas, puedes utilizar:
+#
+#   x = max(10, x - 1)
+
+# Instrucciones:
+# - max() de forma similar para asegurarte de que step no baje de cero si dice <= 2.
+# - Pulsa Enviar respuesta y comprueba el contenido de random_walk.
+
+# Import numpy and set seed
+import numpy as np
+np.random.seed(123)
+
+# Initialize random_walk
+random_walk = [0]
+
+# Complete the for loop
+for x in range(100) :
+    # Set step: last element in random_walk
+    step = random_walk[-1]
+
+    # Roll the dice
+    dice = np.random.randint(1,7)
+
+    # Determine next step
+    if dice <= 2:
+        step = max(0, step - 1)
+    elif dice <= 5:
+        step = step + 1
+    else:
+        step = step + np.random.randint(1,7)
+
+    # Append next_step to random_walk
+    random_walk.append(step)
+
+# Print random_walk
+print(random_walk)
